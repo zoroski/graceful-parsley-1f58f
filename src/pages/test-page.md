@@ -5,7 +5,7 @@ sections:
     subtitle: And the content
     actions:
       - label: lorem-ipsum
-        url: lorem-ipsum
+        url: 'https://google.com'
         style: link
         new_window: false
         type: action
