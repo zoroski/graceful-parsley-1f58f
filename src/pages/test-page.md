@@ -4,7 +4,7 @@ sections:
   - title: Here is my call to action
     subtitle: And the content
     actions:
-      - label: lorem-ipsum
+      - label: This is the message
         url: 'https://google.com'
         style: link
         new_window: false
