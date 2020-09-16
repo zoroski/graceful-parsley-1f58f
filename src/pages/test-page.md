@@ -6,7 +6,7 @@ sections:
     actions:
       - label: This is the message
         url: 'https://google.com'
-        style: secondary
+        style: primary
         new_window: false
         type: action
     has_background: false
