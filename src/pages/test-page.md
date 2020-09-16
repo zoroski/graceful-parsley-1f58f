@@ -1,7 +1,7 @@
 ---
 title: lorem-ipsum
 sections:
-  - title: lorem-ipsum
+  - title: Here is my call to action
     subtitle: lorem-ipsum
     actions: []
     has_background: false
