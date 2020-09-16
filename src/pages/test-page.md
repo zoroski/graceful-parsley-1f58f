@@ -2,7 +2,7 @@
 title: lorem-ipsum
 sections:
   - title: Here is my call to action
-    subtitle: lorem-ipsum
+    subtitle: And the content
     actions: []
     has_background: false
     background_color: white
