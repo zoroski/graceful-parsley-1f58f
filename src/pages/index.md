@@ -76,7 +76,7 @@ sections:
         url: /features
         style: primary
     has_background: true
-    background_color: blue
+    background_color: gray
   - title: lorem-ipsum
     features:
       - title: lorem-ipsum
