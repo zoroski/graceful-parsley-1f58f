@@ -94,5 +94,11 @@ sections:
         actions: []
         type: feature
     type: features_section
+  - title: lorem-ipsum
+    subtitle: lorem-ipsum
+    actions: []
+    has_background: false
+    background_color: white
+    type: cta_section
 template: advanced
 ---
