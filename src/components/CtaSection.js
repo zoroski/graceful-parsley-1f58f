@@ -10,7 +10,15 @@ export default function CtaSection(props) {
   return (
     <section className="section section--cta">
       <div className="container container--lg">
-        <div className={classNames('section__body', 'align-center', { 'inverse bg-blue': section?.has_background && (section?.background_color === 'blue'), 'bg-gray': section?.has_background && (section?.background_color === 'gray') })}>
+        <div
+          style={{
+            backgroundImage: section?.background_image ? `url(${section?.background_image})` : null
+          }}
+          className={classNames('section__body', 'align-center', {
+            'inverse bg-blue': section?.has_background && (section?.background_color === 'blue'),
+            'bg-gray': section?.has_background && (section?.background_color === 'gray')
+          })}
+        >
           <div className="container container--md">
             {section?.title && (
               <h2 className="section__title">{section?.title}</h2>
