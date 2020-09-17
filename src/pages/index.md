@@ -74,7 +74,7 @@ sections:
     actions:
       - label: Learn More
         url: /features
-        style: secondary
+        style: primary
     has_background: true
     background_color: gray
   - title: lorem-ipsum
