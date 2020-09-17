@@ -5,7 +5,7 @@
         "has_nav": true,
         "nav_links": [
             {
-                "label": "Features",
+                "label": "My features",
                 "url": "/features",
                 "style": "link"
             },
