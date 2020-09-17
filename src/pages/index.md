@@ -100,6 +100,6 @@ sections:
     has_background: true
     background_color: blue
     type: cta_section
-    background_image: images/2.png
+    background_image: images/5.png
 template: advanced
 ---
