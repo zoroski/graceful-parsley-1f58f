@@ -35,5 +35,6 @@ sections:
         style: secondary
     has_background: true
     background_color: blue
+  - type: contact_section
 template: advanced
 ---
