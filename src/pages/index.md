@@ -106,5 +106,9 @@ sections:
     background_color: blue
     type: cta_section
     background_image: images/5.png
+  - title: lorem-ipsum
+    items: []
+    actions: []
+    type: column_section
 template: advanced
 ---
