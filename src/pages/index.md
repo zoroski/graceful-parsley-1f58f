@@ -35,7 +35,7 @@ sections:
       - title: Zero touch network and Service Management...
         link: /events
         date: '???'
-        image: images/layer123-hero.png
+        image: images/layer123-event-1.jpg
         tag: Virtual
         type: event_item
       - title: Global Women in Telco & Tech 2020
