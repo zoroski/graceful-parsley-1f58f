@@ -55,7 +55,7 @@ sections:
         date: '2020-09-24'
         tag: lorem-ipsum
         type: event_item
-        image: images/2.png
+        image: images/layer123-event-4.png
       - title: 'OpenRAN: From Promise to Today''s...'
         link: lorem-ipsum
         date: '2020-09-18'
