@@ -96,7 +96,12 @@ sections:
     type: features_section
   - title: lorem-ipsum
     subtitle: lorem-ipsum
-    actions: []
+    actions:
+      - label: lorem-ipsum
+        url: lorem-ipsum
+        style: link
+        new_window: false
+        type: action
     has_background: true
     background_color: blue
     type: cta_section
