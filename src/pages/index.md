@@ -41,7 +41,7 @@ sections:
       - title: Global Women in Telco & Tech 2020
         link: /events
         date: '???'
-        image: images/5.png
+        image: images/layer123-event-2.jpg
         tag: Virtual
         type: event_item
       - title: Network Transformation rally?
