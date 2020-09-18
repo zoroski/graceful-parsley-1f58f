@@ -123,7 +123,7 @@ sections:
         link: /downloads
         author: Analysys Mason
         date: '???'
-        image: images/5.png
+        image: images/layer123-download-2.jpg
         tag: Whitepaper
         type: download_item
       - title: Ericsson Telco Cloud Survey Report May19
