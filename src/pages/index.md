@@ -32,7 +32,7 @@ sections:
         image: images/5.png
         tag: On Zoom!
         type: event_item
-      - title: lorem-ipsum
+      - title: Helo!
         link: lorem-ipsum
         date: '2020-09-24'
         tag: lorem-ipsum
