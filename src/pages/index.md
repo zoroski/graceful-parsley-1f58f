@@ -30,7 +30,7 @@ sections:
         link: /events
         date: '???'
         image: images/5.png
-        tag: Virtual
+        tag: On Zoom!
         type: event_item
       - title: lorem-ipsum
         link: lorem-ipsum
