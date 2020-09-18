@@ -31,7 +31,8 @@
                 "new_window": false,
                 "type": "action"
             }
-        ]
+        ],
+        "logo": "images/layer123logo.svg"
     },
     "footer": {
         "has_nav": true,
