@@ -324,22 +324,51 @@ models:
           type: model
           models:
             - action
-      - type: boolean
-        name: has_background
-        label: Enable section background
-        default: false
-      - type: enum
-        name: background_color
-        label: Background Color
-        options:
-          - white
-          - gray
-          - blue
-        default: white
-        description: The background color of the section
       - type: image
         name: background_image
         label: Set a background image
+  article_item:
+    type: object
+    label: Article Item
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the article
+  download_item:
+    type: object
+    label: Download Item
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the download
+  column_section:
+    type: object
+    label: Column Section
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: list
+        name: items
+        label: Items
+        items:
+          type: model
+          models:
+            - article_item
+            - download_item
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: model
+          models:
+            - action
   features_section:
     type: object
     label: Features Section

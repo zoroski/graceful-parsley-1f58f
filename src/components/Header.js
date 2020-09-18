@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { Link, withPrefix, classNames } from '../utils';
+import { Link, withPrefix } from '../utils';
 import Action from './Action';
 
 export default function Header(props) {
@@ -14,9 +14,13 @@ export default function Header(props) {
         <nav className="navbar" aria-label="Main Navigation">
           <Link className="sr-only" to="#content">Skip to main content</Link>
           {pageContext?.site?.siteMetadata?.header?.logo ? (
-            <Link className="navbar__logo" to={withPrefix('/')}><img src={withPrefix(pageContext?.site?.siteMetadata?.header?.logo)} alt={pageContext?.site?.siteMetadata?.header?.title} /></Link>
+            <Link className="navbar__logo" to={withPrefix('/')}>
+              <img src={withPrefix(pageContext?.site?.siteMetadata?.header?.logo)} alt={pageContext?.site?.siteMetadata?.header?.title} />
+            </Link>
           ) :
-            <Link className="h4 navbar__title" to={withPrefix('/')}>{pageContext?.site?.siteMetadata?.header?.title}</Link>
+            <Link className="h4 navbar__title" to={withPrefix('/')}>
+              {pageContext?.site?.siteMetadata?.header?.title}
+            </Link>
           }
           {pageContext?.site?.siteMetadata?.header?.has_nav && (
             <>
@@ -30,12 +34,12 @@ export default function Header(props) {
                       <svg className="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z" /></svg>
                     </button>
                     <ul className="navbar__list menu">
-                      {_.map(pageContext?.site?.siteMetadata?.header?.nav_links, (action, action_idx) => {
+                      {pageContext?.site?.siteMetadata?.header?.nav_links.map((action, action_idx) => {
                         const pageUrl = _.trim(pageContext?.url, '/');
                         const actionUrl = _.trim(action?.url, '/');
                         return (
-                          <li key={action_idx} className={classNames('navbar__item', { 'navbar__item--btn': action?.style !== 'link', 'is-active': pageUrl === actionUrl })}>
-                            <Action {...props} action={action} />
+                          <li key={action_idx}>
+                            <Action {...props} action={action} isActive={pageUrl === actionUrl} nav />
                           </li>
                         );
                       })}

@@ -1,15 +1,8 @@
 import React from 'react';
-import _ from 'lodash';
-
 import Action from './Action';
 
-export default class SectionActions extends React.Component {
-    render() {
-        let actions = _.get(this.props, 'actions', null);
-        return (
-            _.map(actions, (action, action_idx) => (
-              <Action key={action_idx} {...this.props} action={action} />
-            ))
-        );
-    }
+export default function SectionActions(props) {
+  const { actions } = props;
+
+  return actions.map((action, index) => <Action key={index} {...props} action={action} />);
 }

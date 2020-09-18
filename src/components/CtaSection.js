@@ -1,6 +1,39 @@
 import React from 'react';
-import { classNames } from '../utils';
+import styled from '@emotion/styled';
 import SectionActions from './SectionActions';
+
+const Container = styled.section`
+  background-image: url(${props => props?.backgroundImage});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3.75rem;
+  width: 100%;
+`;
+
+const Content = styled.div`
+  padding: 3.75em 0;
+  position: relative;
+  text-align: center;
+`;
+
+const Title = styled.h2`
+  color: ${props => props.hasBackgroundImage ? '#fff' : '#282f36'};
+  font-size: 2.25em;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 2.25rem 0 1.125rem;
+`;
+
+const Copy = styled.p`
+  color: ${props => props.hasBackgroundImage ? '#fff' : '#536171'};
+  margin: 0 0 1.5rem;
+  text-align: center;
+`;
+
+const ActionsContainer = styled.div`
+  justify-content: center;
+`;
 
 export default function CtaSection(props) {
   const {
@@ -8,34 +41,26 @@ export default function CtaSection(props) {
   } = props;
 
   return (
-    <section className="section section--cta">
+    <Container backgroundImage={section?.background_image}>
       <div className="container container--lg">
-        <div
-          style={{
-            backgroundImage: section?.background_image ? `url(${section?.background_image})` : null
-          }}
-          className={classNames('section__body', 'align-center', {
-            'inverse bg-blue': section?.has_background && (section?.background_color === 'blue'),
-            'bg-gray': section?.has_background && (section?.background_color === 'gray')
-          })}
-        >
+        <Content>
           <div className="container container--md">
             {section?.title && (
-              <h2 className="section__title">{section?.title}</h2>
+              <Title hasBackgroundImage={!!section?.background_image}>{section?.title}</Title>
             )}
             {section?.subtitle && (
-              <div className="section__copy">
+              <Copy hasBackgroundImage={!!section?.background_image}>
                 <p>{section?.subtitle}</p>
-              </div>
+              </Copy>
             )}
             {section?.actions && (
-              <div className="section__actions btn-group">
-                <SectionActions {...props} actions={section?.actions} />
-              </div>
+              <ActionsContainer>
+                <SectionActions {...props} actions={section?.actions} center />
+              </ActionsContainer>
             )}
           </div>
-        </div>
+        </Content>
       </div>
-    </section>
+    </Container>
   );
 }
