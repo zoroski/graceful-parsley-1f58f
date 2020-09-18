@@ -47,7 +47,7 @@ sections:
       - title: Network Transformation rally?
         link: /events
         date: '???'
-        image: images/5.png
+        image: images/layer123-event-3.png
         tag: On Zoom!
         type: event_item
       - title: Helo! This is my new thing!
