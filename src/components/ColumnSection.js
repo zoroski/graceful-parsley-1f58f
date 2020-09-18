@@ -16,6 +16,7 @@ const Title = styled.h2`
 
 const ColumnsSection = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 30px;
 `;
 
@@ -23,7 +24,7 @@ const Column = styled.div`
   margin-right: 40px;
   width: calc(${props => 100 / props.numberOfColumns}% - ${props => ((props.numberOfColumns - 1) * 40) / props.numberOfColumns}px);
 
-  &:nth-of-type(3n) {
+  &:nth-of-type(${props => props.numberOfColumns}n) {
     margin: 0;
   }
 `;
