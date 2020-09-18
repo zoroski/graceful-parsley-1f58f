@@ -61,7 +61,7 @@ sections:
         date: '2020-09-18'
         tag: lorem-ipsum
         type: event_item
-      - title: lorem-ipsum
+      - title: SD-WAN Security & SASE
         link: lorem-ipsum
         date: '2020-09-18'
         tag: lorem-ipsum
