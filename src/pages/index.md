@@ -40,7 +40,7 @@ sections:
         type: event_item
       - title: Global Women in Telco & Tech 2020
         link: /events
-        date: '???'
+        date: '2020-09-26'
         image: images/layer123-event-2.jpg
         tag: Virtual
         type: event_item
