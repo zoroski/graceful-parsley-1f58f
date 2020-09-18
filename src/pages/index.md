@@ -61,6 +61,11 @@ sections:
         date: '2020-09-18'
         tag: lorem-ipsum
         type: event_item
+      - title: lorem-ipsum
+        link: lorem-ipsum
+        date: '2020-09-18'
+        tag: lorem-ipsum
+        type: event_item
     type: column_section
   - title: 'The Network: News And Insights from Layer123'
     actions:
