@@ -1,7 +1,7 @@
 ---
 title: Home
 sections:
-  - title: lorem-ipsum
+  - title: ''
     subtitle: lorem-ipsum
     actions:
       - label: Learn More
