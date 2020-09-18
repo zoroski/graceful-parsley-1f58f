@@ -26,7 +26,7 @@ sections:
         image: images/5.png
         tag: Virtual
         type: event_item
-      - title: Network Transformation...
+      - title: Network Transformation rally?
         link: /events
         date: '???'
         image: images/5.png
