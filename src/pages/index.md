@@ -28,7 +28,7 @@ sections:
     has_background: true
     background_color: blue
     type: cta_section
-    background_image: images/5.png
+    background_image: images/layer123-hero.png
   - title: Upcoming Events
     numberOfColumns: 4
     items:
