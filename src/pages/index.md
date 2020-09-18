@@ -130,7 +130,7 @@ sections:
         link: /downloads
         author: Ericsson
         date: '???'
-        image: images/5.png
+        image: images/layer123-download-3.jpg
         tag: Whitepaper
         type: download_item
     type: column_section
