@@ -34,7 +34,7 @@ sections:
     items:
       - title: Zero touch network and Service Management...
         link: /events
-        date: '???'
+        date: '2020-09-17'
         image: images/layer123-event-1.jpg
         tag: Virtual
         type: event_item
