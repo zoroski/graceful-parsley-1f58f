@@ -116,7 +116,7 @@ sections:
         link: /downloads
         author: UBIQUBE
         date: '???'
-        image: images/5.png
+        image: images/layer123-download-1.png
         tag: Whitepaper
         type: download_item
       - title: Analysys Mason Telecoms Software Forecast Sample Jan19
