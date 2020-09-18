@@ -314,7 +314,7 @@ models:
         name: title
         label: Title
         description: The title of the section
-      - type: string
+      - type: markdown
         name: subtitle
         label: Subtitle
         description: The subtitle of the section
@@ -341,7 +341,7 @@ models:
         name: link
         label: Link
         description: The link to the download
-      - type: string
+      - type: markdown
         name: content
         label: Content
         description: The content of the article
