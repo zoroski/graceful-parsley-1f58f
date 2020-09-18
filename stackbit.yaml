@@ -250,6 +250,7 @@ models:
           labelField: title
           models:
             - blog_feed_section
+            - column_section
             - contact_section
             - content_section
             - cta_section
