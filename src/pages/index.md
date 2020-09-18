@@ -34,7 +34,7 @@ sections:
         type: event_item
       - title: lorem-ipsum
         link: lorem-ipsum
-        date: '2020-09-18'
+        date: '2020-09-24'
         tag: lorem-ipsum
         type: event_item
     type: column_section
