@@ -66,7 +66,7 @@ sections:
         date: '2020-09-18'
         tag: lorem-ipsum
         type: event_item
-      - title: lorem-ipsum
+      - title: Layer123 Europe 2021
         link: lorem-ipsum
         date: '2020-09-18'
         tag: lorem-ipsum
