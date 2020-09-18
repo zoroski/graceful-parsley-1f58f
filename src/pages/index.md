@@ -12,7 +12,7 @@ sections:
     type: cta_section
     background_image: images/5.png
   - title: Upcoming Events
-    numberOfColumns: 2
+    numberOfColumns: 1
     items:
       - title: Zero touch network and Service Management...
         link: /events
