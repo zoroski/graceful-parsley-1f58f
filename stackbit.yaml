@@ -337,6 +337,18 @@ models:
         name: title
         label: Title
         description: The title of the article
+      - type: string
+        name: link
+        label: Link
+        description: The link to the download
+      - type: string
+        name: content
+        label: Content
+        description: The content of the article
+      - type: date
+        name: date
+        label: Date
+        description: The date of the article
   download_item:
     type: object
     label: Download Item
@@ -346,6 +358,51 @@ models:
         name: title
         label: Title
         description: The title of the download
+      - type: string
+        name: link
+        label: Link
+        description: The link to the download
+      - type: image
+        name: image
+        label: Image
+        description: The image of the download
+      - type: string
+        name: author
+        label: Author
+        description: The author of the article
+      - type: date
+        name: date
+        label: Date
+        description: The publication date
+      - type: string
+        name: tag
+        label: Tag
+        description: The tag of the download
+  event_item:
+    type: object
+    label: Event Item
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the event
+      - type: string
+        name: link
+        label: Link
+        description: The link to the event
+      - type: image
+        name: image
+        label: Image
+        description: The image of the event
+      - type: date
+        name: date
+        label: Date
+        description: The event date
+      - type: string
+        name: tag
+        label: Tag
+        description: The tag of the event
   column_section:
     type: object
     label: Column Section
@@ -355,6 +412,10 @@ models:
         name: title
         label: Title
         description: The title of the section
+      - type: number
+        name: numberOfColumns
+        label: Number of columns
+        description: The number of columns per row
       - type: list
         name: items
         label: Items
@@ -363,6 +424,7 @@ models:
           models:
             - article_item
             - download_item
+            - event_item
       - type: list
         name: actions
         label: Action Buttons

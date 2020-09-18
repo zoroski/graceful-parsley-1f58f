@@ -10,6 +10,7 @@ import ContactSection from './ContactSection';
 import ContentSection from './ContentSection';
 import CtaSection from './CtaSection';
 import DownloadItem from './DownloadItem';
+import EventItem from './EventItem';
 import FeaturesSection from './FeaturesSection';
 import Footer from './Footer';
 import Header from './Header';
@@ -31,6 +32,7 @@ export {
     ContentSection,
     CtaSection,
     DownloadItem,
+    EventItem,
     FeaturesSection,
     Footer,
     Header,
@@ -53,6 +55,7 @@ export default {
     ContentSection,
     CtaSection,
     DownloadItem,
+    EventItem,
     FeaturesSection,
     Footer,
     Header,

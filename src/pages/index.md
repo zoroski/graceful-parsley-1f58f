@@ -1,114 +1,87 @@
 ---
 title: Home
 sections:
-  - type: hero_section
-    title: This Is A Big Hero Headline
-    subtitle: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus
-      quis lorem malesuada luctus.
-    actions:
-      - label: Learn More
-        url: /features
-        style: primary
-      - label: Contact Us
-        url: /contact
-        style: secondary
-    align: left
-    image: images/hero.svg
-    image_position: right
-    has_background: true
-    background:
-      background_color: blue
-      background_image: images/diagonal-lines.svg
-      background_image_opacity: 20
-      background_image_size: auto
-      background_image_repeat: repeat
-  - type: features_section
-    title: Features
-    features:
-      - title: Feature 1
-        content: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl
-          ligula, cursus id molestie vel, maximus aliquet risus. Vivamus in nibh
-          fringilla, fringilla.
-        align: left
-        image: images/feature.svg
-        image_position: right
-        actions:
-          - label: Learn More
-            url: /features
-            style: secondary
-      - title: Feature 2
-        content: >-
-          Ac felis donec et odio pellentesque. Sagittis vitae et leo duis ut
-          diam quam nulla. Ullamcorper a lacus vestibulum sed arcu non odio
-          euismod lacinia.
-        align: left
-        image: images/feature.svg
-        image_position: left
-        actions:
-          - label: Learn More
-            url: /features
-            style: secondary
-      - title: Feature 3
-        content: >-
-          Id nibh tortor id aliquet lectus proin. Amet venenatis urna cursus
-          eget nunc. Lacus sed turpis tincidunt id aliquet risus feugiat in
-          ante.
-        align: left
-        image: images/feature.svg
-        image_position: right
-        actions:
-          - label: Learn More
-            url: /features
-            style: secondary
-  - type: blog_feed_section
-    title: What's New
-    show_recent: true
-    recent_count: 3
-  - type: cta_section
-    title: This Is A CTA
-    subtitle: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus
-      quis lorem malesuada luctus.
-    actions:
-      - label: Learn More
-        url: /features
-        style: primary
-    has_background: true
-    background_color: gray
-  - title: lorem-ipsum
-    features:
-      - title: lorem-ipsum
-        content: >-
-          ## Lorem ipsum
-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-          - Lorem ipsum
-
-          - dolor sit amet
-        align: left
-        image_position: left
-        actions: []
-        type: feature
-    type: features_section
   - title: lorem-ipsum
     subtitle: lorem-ipsum
     actions:
-      - label: An action
-        url: lorem-ipsum
+      - label: Learn More
+        url: /features
         style: primary
-        new_window: false
-        type: action
     has_background: true
     background_color: blue
     type: cta_section
     background_image: images/5.png
-  - title: lorem-ipsum
-    items: []
-    actions: []
+  - title: Upcoming Events
+    numberOfColumns: 4
+    items: 
+      - title: Zero touch network and Service Management...
+        link: /events
+        date: ???
+        image: images/5.png
+        tag: Virtual
+        type: event_item
+      - title: Global Women in Telco & Tech 2020
+        link: /events
+        date: ???
+        image: images/5.png
+        tag: Virtual
+        type: event_item
+      - title: Network Transformation...
+        link: /events
+        date: ???
+        image: images/5.png
+        tag: Virtual
+        type: event_item
+    type: column_section
+  - title: "The Network: News And Insights from Layer123"
+    actions:
+      - label: More Articles
+        url: /articles
+        style: primary
+    items: 
+      - title: "KPN’s SDN/NFV Programme: What Lessons Have Been Learned?"
+        link: /articles
+        content: "Dutch carrier KPN is one of them. Having launched a carefully-planned SDN and NFV transformation programme in 2015, the past five years have seen great progress ..."
+        date: ???
+        type: article_item
+      - title: "Mavenir and the March of OpenRAN: “Operators are Taking..."
+        link: /articles
+        content: "Network automation has many strings to its bow, and the array of standards, initiatives, software and ideas is vast. But everything going on in the space shares a common..."
+        date: ???
+        type: article_item
+      - title: "Network Transformation in 2020: 6 Trends to Watch"
+        link: /articles
+        content: "In the network transformation community, we’re now at the stage where we can look back as well as forward. Every year at the SDN NFV World Congress, we see more..."
+        date: ???
+        type: article_item
+    type: column_section
+  - title: Downloads
+    actions:
+      - label: More Downloads
+        url: /downloads
+        style: primary
+    items: 
+      - title: The Untold Infrastructure Integration Challenges...
+        link: /downloads
+        author: UBIQUBE
+        date: ???
+        image: images/5.png
+        tag: Whitepaper
+        type: download_item
+      - title: Analysys Mason Telecoms Software Forecast Sample Jan19
+        link: /downloads
+        author: Analysys Mason
+        date: ???
+        image: images/5.png
+        tag: Whitepaper
+        type: download_item
+      - title: Ericsson Telco Cloud Survey Report May19
+        link: /downloads
+        author: Ericsson
+        date: ???
+        image: images/5.png
+        tag: Whitepaper
+        type: download_item
     type: column_section
 template: advanced
 ---

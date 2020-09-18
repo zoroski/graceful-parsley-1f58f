@@ -1,7 +1,64 @@
 import React from 'react';
+import styled from '@emotion/styled';
+import _ from 'lodash';
+import Components from './index';
+import Container from './Container';
+import SectionActions from './SectionActions';
 
-export default function ColumnSection() {
+const Title = styled.h2`
+  font-weight: 500;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 10px 0;
+`;
+
+const ColumnsSection = styled.div`
+  display: flex;
+  margin-bottom: 30px;
+`;
+
+const Column = styled.div`
+  margin-right: 40px;
+  width: calc(${props => 100 / props.numberOfColumns}% - ${props => ((props.numberOfColumns - 1) * 40) / props.numberOfColumns}px);
+
+  &:nth-of-type(3n) {
+    margin: 0;
+  }
+`;
+
+const ActionsContainer = styled.div`
+  justify-content: center;
+  text-align: center;
+`;
+
+export default function ColumnSection(props) {
+  const {
+    section
+  } = props;
+
   return (
-    <section>Test</section>
+    <Container>
+      <Title>{section?.title}</Title>
+
+      <ColumnsSection>
+        {section?.items && section.items.map((item) => {
+          const component = _.upperFirst(_.camelCase(item.type));
+          const Component = Components[component];
+          return (
+            <Column numberOfColumns={section?.numberOfColumns || 3}>
+              <Component {...item} />
+            </Column>
+          );
+        })}
+      </ColumnsSection>
+
+      {section?.actions && (
+        <ActionsContainer>
+          <SectionActions {...props} actions={section?.actions} center />
+        </ActionsContainer>
+      )}
+    </Container>
   );
 }
