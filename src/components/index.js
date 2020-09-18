@@ -1,12 +1,15 @@
 import Action from './Action';
+import ArticleItem from './ArticleItem';
 import BlogFeedItemFilter from './BlogFeedItemFilter';
 import BlogFeedSection from './BlogFeedSection';
 import BlogPostCategories from './BlogPostCategories';
 import BlogPostFeedItem from './BlogPostFeedItem';
 import BlogPostTags from './BlogPostTags';
+import ColumnSection from './ColumnSection';
 import ContactSection from './ContactSection';
 import ContentSection from './ContentSection';
 import CtaSection from './CtaSection';
+import DownloadItem from './DownloadItem';
 import FeaturesSection from './FeaturesSection';
 import Footer from './Footer';
 import Header from './Header';
@@ -17,14 +20,17 @@ import Layout from './Layout';
 
 export {
     Action,
+    ArticleItem,
     BlogFeedItemFilter,
     BlogFeedSection,
     BlogPostCategories,
     BlogPostFeedItem,
     BlogPostTags,
+    ColumnSection,
     ContactSection,
     ContentSection,
     CtaSection,
+    DownloadItem,
     FeaturesSection,
     Footer,
     Header,
@@ -36,14 +42,17 @@ export {
 
 export default {
     Action,
+    ArticleItem,
     BlogFeedItemFilter,
     BlogFeedSection,
     BlogPostCategories,
     BlogPostFeedItem,
     BlogPostTags,
+    ColumnSection,
     ContactSection,
     ContentSection,
     CtaSection,
+    DownloadItem,
     FeaturesSection,
     Footer,
     Header,
