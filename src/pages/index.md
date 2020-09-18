@@ -97,7 +97,7 @@ sections:
   - title: lorem-ipsum
     subtitle: lorem-ipsum
     actions:
-      - label: lorem-ipsum
+      - label: An action
         url: lorem-ipsum
         style: primary
         new_window: false
