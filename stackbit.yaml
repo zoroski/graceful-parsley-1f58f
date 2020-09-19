@@ -97,31 +97,10 @@ models:
           type: model
           models:
             - action
-      - type: boolean
-        name: has_social
-        label: Enable Social Links
-        description: Display social links in the footer
-        default: true
-      - type: list
-        name: social_links
-        label: Social Links
-        description: The list of social links displayed in the footer
-        items:
-          type: model
-          models:
-            - action
       - type: string
         name: content
         label: Footer Content
         description: The copyright text displayed in the footer
-      - type: list
-        name: links
-        label: Links
-        description: A list of links displayed in the footer
-        items:
-          type: model
-          models:
-            - action
   person:
     type: data
     label: Person
@@ -345,7 +324,7 @@ models:
         name: content
         label: Content
         description: The content of the article
-      - type: date
+      - type: string
         name: date
         label: Date
         description: The date of the article
@@ -370,7 +349,7 @@ models:
         name: author
         label: Author
         description: The author of the article
-      - type: date
+      - type: string
         name: date
         label: Date
         description: The publication date
@@ -395,7 +374,7 @@ models:
         name: image
         label: Image
         description: The image of the event
-      - type: date
+      - type: string
         name: date
         label: Date
         description: The event date

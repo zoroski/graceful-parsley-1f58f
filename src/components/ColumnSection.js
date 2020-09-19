@@ -9,8 +9,8 @@ const Title = styled.h2`
   font-weight: 500;
   font-size: 1.875rem;
   line-height: 2.25rem;
-  margin-top: 20px;
   margin-bottom: 30px;
+  margin-top: 40px;
   padding: 10px 0;
 `;
 
@@ -21,11 +21,15 @@ const ColumnsSection = styled.div`
 `;
 
 const Column = styled.div`
-  margin-right: 40px;
-  width: calc(${props => 100 / props.numberOfColumns}% - ${props => ((props.numberOfColumns - 1) * 40) / props.numberOfColumns}px);
+  width: 100%;
 
-  &:nth-of-type(${props => props.numberOfColumns}n) {
-    margin: 0;
+  @media (min-width: 768px) {
+    margin-right: 40px;
+    width: calc(${props => 100 / props.numberOfColumns}% - ${props => ((props.numberOfColumns - 1) * 40) / props.numberOfColumns}px);
+  
+    &:nth-of-type(${props => props.numberOfColumns}n) {
+      margin: 0;
+    }
   }
 `;
 
@@ -44,11 +48,11 @@ export default function ColumnSection(props) {
       <Title>{section?.title}</Title>
 
       <ColumnsSection>
-        {section?.items && section.items.map((item) => {
+        {section?.items && section.items.map((item, index) => {
           const component = _.upperFirst(_.camelCase(item.type));
           const Component = Components[component];
           return (
-            <Column numberOfColumns={section?.numberOfColumns || 3}>
+            <Column key={index} numberOfColumns={section?.numberOfColumns || 3}>
               <Component {...item} />
             </Column>
           );

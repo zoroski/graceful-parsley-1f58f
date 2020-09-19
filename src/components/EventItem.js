@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { graphql, useStaticQuery } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 import { Link } from '../utils';
 
 const Container = styled(Link)`
@@ -16,14 +18,13 @@ const Container = styled(Link)`
     text-decoration: underline;
 
     & > div:first-child {
-      background-size: 105%;
+      background-size: 105% !important;
       transform: none;
     }
   }
 `;
 
-const Image = styled.div`
-  background-image: ${props => `url(${props.src})`};
+const Image = styled(BackgroundImage)`
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -49,6 +50,7 @@ const Title = styled.h4`
   font-size: 1.25rem;
   line-height: 1.5rem;
   margin: 0 0 10px;
+  min-height: 48px;
   text-decoration: none;
 `;
 
@@ -68,14 +70,35 @@ const Tag = styled.p`
 
 export default function DownloadItem({
   date,
-  image,
+  image: imageProp,
   link,
   title,
   tag
 }) {
+  const data = useStaticQuery(graphql`
+    query {
+      images: allFile {
+        edges {
+          node {
+            absolutePath
+            childImageSharp {
+              fluid(maxWidth: 260, maxHeight: 300, quality: 90, fit: CONTAIN, background: "rgba(255,255,255,1)", cropFocus: CENTER) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const image = data.images.edges.find(n => {
+    return n.node.absolutePath.includes(imageProp);
+  });
+
   return (
     <Container to={link}>
-      <Image alt={title} src={image} />
+      <Image alt={title} fluid={image?.node?.childImageSharp?.fluid} Tag="div" />
       <Content>
         <Title>{ title }</Title>
         <Date>{ date }</Date>

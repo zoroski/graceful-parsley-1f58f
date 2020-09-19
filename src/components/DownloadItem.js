@@ -1,5 +1,7 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
+import Img from 'gatsby-image';
 import { Link } from '../utils';
 
 const Container = styled.article`
@@ -10,17 +12,19 @@ const Container = styled.article`
   padding: 20px;
 `;
 
-const Image = styled.img`
+const Image = styled(Img)`
   max-width: 100px;
   max-height: 40px;
   margin-bottom: 15px;
   width: 100%;
-  height: 100%;
+  height: 40px;
   -o-object-fit: contain;
   object-fit: contain;
   -o-object-position: left;
   object-position: left;
-  font-family: "object-fit: contain; object-position: left";
+  object-fit: contain;
+  object-position: left;
+  vertial-align: middle;
 `;
 
 const Title = styled(Link)`
@@ -66,14 +70,35 @@ const Tag = styled.p`
 export default function DownloadItem({
   author,
   date,
-  image,
+  image: imageProp,
   link,
   title,
   tag
 }) {
+  const data = useStaticQuery(graphql`
+    query {
+      images: allFile {
+        edges {
+          node {
+            absolutePath
+            childImageSharp {
+              fixed(width: 100, height: 40, quality: 90, fit: CONTAIN, background: "rgba(255,255,255,1)") {
+                ...GatsbyImageSharpFixed_withWebp
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const image = data.images.edges.find(n => {
+    return n.node.absolutePath.includes(imageProp);
+  });
+  
   return (
     <Container>
-      <Image alt={title} src={image} />
+      <Image alt={title} fixed={image.node.childImageSharp.fixed} />
       <Title to={link}>{ title }</Title>
       <Author>by <strong>{ author }</strong></Author>
       <Date>{ date }</Date>

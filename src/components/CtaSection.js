@@ -1,18 +1,20 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { graphql, useStaticQuery } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 import SectionActions from './SectionActions';
 
-const Container = styled.section`
-  background-image: url(${props => props?.backgroundImage});
+const Container = styled(BackgroundImage)`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 3.75rem;
+  box-sizing: border-box;
+  margin-bottom: 0;
   width: 100%;
 `;
 
 const Content = styled.div`
-  padding: 3.75em 0;
+  padding: 2.5em 0 2em;
   position: relative;
   text-align: center;
 `;
@@ -27,8 +29,10 @@ const Title = styled.h2`
 
 const Copy = styled.p`
   color: ${props => props.hasBackgroundImage ? '#fff' : '#536171'};
+  line-height: 1.5;
   margin: 0 0 1.5rem;
   text-align: center;
+  white-space: pre-line;
 `;
 
 const ActionsContainer = styled.div`
@@ -40,8 +44,29 @@ export default function CtaSection(props) {
     section
   } = props;
 
+  const data = useStaticQuery(graphql`
+    query {
+      images: allFile {
+        edges {
+          node {
+            absolutePath
+            childImageSharp {
+              fluid(maxWidth: 1920, maxHeight: 768, quality: 90) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const image = data.images.edges.find(n => {
+    return n.node.absolutePath.includes(section?.background_image);
+  });
+
   return (
-    <Container backgroundImage={section?.background_image}>
+    <Container fluid={image?.node?.childImageSharp?.fluid} Tag="section">
       <div className="container container--lg">
         <Content>
           <div className="container container--md">
@@ -50,7 +75,7 @@ export default function CtaSection(props) {
             )}
             {section?.subtitle && (
               <Copy hasBackgroundImage={!!section?.background_image}>
-                <p>{section?.subtitle}</p>
+                {section?.subtitle}
               </Copy>
             )}
             {section?.actions && (

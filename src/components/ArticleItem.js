@@ -36,7 +36,7 @@ const Date = styled.p`
   color: #3339;
   font-size: 1rem;
   line-height: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 `;
 
 export default function ArticleItem({

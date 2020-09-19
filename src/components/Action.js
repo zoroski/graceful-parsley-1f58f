@@ -55,8 +55,8 @@ const StyledLinkSecondary = styled(Link)`
 `;
 
 const StyledLink = styled(Link)`
-  color: #5fc99d;
-  text-decoration: underline;
+  color: #4388de;
+  text-decoration: none;
 
   ${props => props.nav && `
     color: #333;
@@ -73,7 +73,7 @@ const StyledLink = styled(Link)`
   `}
 
   &:hover, &:focus, &:active {
-    text-decoration: none;
+    text-decoration: underline;
   }
 `;
 
