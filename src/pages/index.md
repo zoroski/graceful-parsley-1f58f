@@ -33,7 +33,7 @@ sections:
       - title: Zero touch network and Service Management...
         link: /events
         date: 17 September 2020
-        image: images/5.png
+        image: images/eleanor-carr.jpg
         tag: Virtual
         type: event_item
       - title: Global Women in Telco & Tech 2020
