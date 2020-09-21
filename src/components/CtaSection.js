@@ -77,7 +77,7 @@ export default function CtaSection(props) {
 
   const inEditMode = isEditor(props);
 
-  const Component = inEditMode ? EditorContainer : Container;
+  const Component = inEditMode ? 'div' : Container;
 
   return (
     <Component fluid={inEditMode ? image?.node?.childImageSharp?.fluid?.src : image?.node?.childImageSharp?.fluid} Tag="section">
