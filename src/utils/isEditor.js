@@ -1,4 +1,5 @@
 export default function isEditor(props) {
+  return true;
   if (!props?.location?.href || typeof document === 'undefined' || typeof window === 'undefined') {
     return true;
   }
