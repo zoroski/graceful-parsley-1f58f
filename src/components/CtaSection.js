@@ -76,7 +76,7 @@ export default function CtaSection(props) {
 
   const inEditMode = isEditor(props);
 
-  const Component = inEditMode ? EditorContainer : Container;
+  const Component = inEditMode ? 'div' : Container;
 
   return (
     <Component
