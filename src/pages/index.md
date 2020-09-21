@@ -7,20 +7,6 @@ sections:
       process – helping operators and network owners to virtualise their
       networks and find commercial benefits from the improved performance this
       transformation brings.
-
-
-      With presentations that are always unique to the events you hear them at,
-      our congresses in The Hague, Madrid and Dubai bring together
-      representatives from telecoms operators, network owners, analysts, data
-      centres, solution providers, and more – everyone with a voice in how
-      networking is moving to an open future.
-
-
-      Sessions at our events don’t just cover technical details like SDN, NFV,
-      OpenRAN, edge computing, applied AI, disaggregation, automation and
-      orchestration. They also reveal how operators and network owners are
-      commercialising these technologies – making a real difference to operator
-      profitability.
     actions:
       - label: Learn More
         url: /features
