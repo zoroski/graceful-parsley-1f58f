@@ -98,7 +98,7 @@ export default function DownloadItem({
   
   return (
     <Container>
-      <Image alt={title} fixed={image.node.childImageSharp.fixed} />
+      <Image alt={title} fixed={image?.node?.childImageSharp?.fixed} />
       <Title to={link}>{ title }</Title>
       <Author>by <strong>{ author }</strong></Author>
       <Date>{ date }</Date>
