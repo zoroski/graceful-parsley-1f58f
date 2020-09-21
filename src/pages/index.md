@@ -25,8 +25,6 @@ sections:
       - label: Learn More
         url: /features
         style: primary
-    has_background: true
-    background_color: blue
     type: cta_section
     background_image: images/layer123-hero.png
   - title: Upcoming Events
