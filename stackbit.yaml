@@ -287,13 +287,12 @@ models:
   cta_section:
     type: object
     label: CTA Section
-    labelField: title
     fields:
       - type: string
         name: title
         label: Title
         description: The title of the section
-      - type: string
+      - type: markdown
         name: subtitle
         label: Subtitle
         description: The subtitle of the section
