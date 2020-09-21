@@ -44,6 +44,8 @@ export default function CtaSection(props) {
     section
   } = props;
 
+  console.log(props);
+
   const data = useStaticQuery(graphql`
     query {
       images: allFile {
@@ -66,7 +68,7 @@ export default function CtaSection(props) {
   });
 
   return (
-    <Container fluid={image?.node?.childImageSharp?.fluid} Tag="section">
+    // <Container fluid={image?.node?.childImageSharp?.fluid} Tag="section">
       <div className="container container--lg">
         <Content>
           <div className="container container--md">
@@ -86,6 +88,6 @@ export default function CtaSection(props) {
           </div>
         </Content>
       </div>
-    </Container>
+    // </Container>
   );
 }
