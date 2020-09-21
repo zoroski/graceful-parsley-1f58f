@@ -1,7 +1,7 @@
 ---
 title: Home
 sections:
-  - title: g
+  - title: ''
     subtitle: >-
       At Layer123, we connect everyone involved in the network transformation
       process – helping operators and network owners to virtualise their
