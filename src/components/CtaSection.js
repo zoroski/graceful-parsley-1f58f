@@ -37,7 +37,7 @@ const Title = styled.h2`
   margin: 2.25rem 0 1.125rem;
 `;
 
-const Copy = styled.p`
+const Copy = styled.div`
   color: ${props => props.hasBackgroundImage ? '#fff' : '#536171'};
   line-height: 1.5;
   margin: 0 0 1.5rem;
