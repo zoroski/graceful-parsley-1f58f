@@ -1,32 +1,6 @@
 ---
 title: Home
 sections:
-  - title: ''
-    subtitle: >-
-      At Layer123, we connect everyone involved in the network transformation
-      process – helping operators and network owners to virtualise their
-      networks and find commercial benefits from the improved performance this
-      transformation brings.
-
-
-      With presentations that are always unique to the events you hear them at,
-      our congresses in The Hague, Madrid and Dubai bring together
-      representatives from telecoms operators, network owners, analysts, data
-      centres, solution providers, and more – everyone with a voice in how
-      networking is moving to an open future.
-
-
-      Sessions at our events don’t just cover technical details like SDN, NFV,
-      OpenRAN, edge computing, applied AI, disaggregation, automation and
-      orchestration. They also reveal how operators and network owners are
-      commercialising these technologies – making a real difference to operator
-      profitability.
-    actions:
-      - label: Learn More
-        url: /features
-        style: primary
-    type: cta_section
-    background_image: images/layer123-hero.png
   - title: Upcoming Events
     numberOfColumns: 4
     items:
@@ -72,6 +46,12 @@ sections:
         tag: Virtual
         type: event_item
         image: images/layer123-event-7.png
+      - title: lorem-ipsum
+        link: lorem-ipsum
+        date: lorem-ipsum
+        tag: lorem-ipsum
+        type: event_item
+        image: images/4.png
     type: column_section
   - title: 'The Network: News And Insights from Layer123'
     actions:
@@ -131,11 +111,6 @@ sections:
         image: images/layer123-download-3.jpg
         tag: Whitepaper
         type: download_item
-    type: column_section
-  - title: lorem-ipsum
-    numberOfColumns: 0
-    items: []
-    actions: []
     type: column_section
 template: advanced
 ---

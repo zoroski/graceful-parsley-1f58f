@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import { markdownify } from '../utils';
 import SectionActions from './SectionActions';
 
 const Container = styled(BackgroundImage)`
@@ -32,7 +33,6 @@ const Copy = styled.p`
   line-height: 1.5;
   margin: 0 0 1.5rem;
   text-align: center;
-  white-space: pre-line;
 `;
 
 const ActionsContainer = styled.div`
@@ -75,7 +75,7 @@ export default function CtaSection(props) {
             )}
             {section?.subtitle && (
               <Copy hasBackgroundImage={!!section?.background_image}>
-                {section?.subtitle}
+                {markdownify(section.subtitle)}
               </Copy>
             )}
             {section?.actions && (
