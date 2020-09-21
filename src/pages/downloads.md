@@ -1,7 +1,7 @@
 ---
 title: lorem-ipsum
 sections:
-  - title: lorem-ipsum
+  - title: Downloads
     numberOfColumns: 0
     items: []
     actions: []
