@@ -81,7 +81,7 @@ export default function CtaSection(props) {
   return (
     <Component
       // fluid={image?.node?.childImageSharp?.fluid}
-      style={{ backgroundImage: inEditMode ? `url(${image?.node?.childImageSharp?.fluid?.src})` : null }}
+      // style={{ backgroundImage: inEditMode ? `url(${image?.node?.childImageSharp?.fluid?.src})` : null }}
       // Tag="section"
     >
       <div className="container container--lg">
