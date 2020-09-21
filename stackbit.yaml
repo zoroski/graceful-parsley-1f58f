@@ -306,6 +306,7 @@ models:
       - type: image
         name: background_image
         label: Set a background image
+        description: The background image for the section
   article_item:
     type: object
     label: Article Item
