@@ -2,7 +2,7 @@
 title: lorem-ipsum
 sections:
   - title: Downloads
-    numberOfColumns: 0
+    numberOfColumns: 4
     items: []
     actions: []
     type: column_section
