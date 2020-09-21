@@ -15,7 +15,6 @@ const Container = styled(BackgroundImage)`
 `;
 
 const EditorContainer = styled.div`
-  background-image: url(${props => props.fluid});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -80,7 +79,11 @@ export default function CtaSection(props) {
   const Component = inEditMode ? EditorContainer : Container;
 
   return (
-    <div>
+    <Component
+      fluid={image?.node?.childImageSharp?.fluid}
+      style={{ backgroundImage: inEditMode ? image?.node?.childImageSharp?.fluid?.src : null }}
+      Tag="section"
+    >
       <div className="container container--lg">
         <Content>
           <div className="container container--md">
@@ -100,6 +103,6 @@ export default function CtaSection(props) {
           </div>
         </Content>
       </div>
-    </div>
+    </Component>
   );
 }
