@@ -74,7 +74,7 @@ export default function CtaSection(props) {
     return n.node.absolutePath.includes(section?.background_image);
   });
 
-  const inEditMode = true; // isEditor(props);
+  const inEditMode = isEditor(props);
 
   const Component = inEditMode ? EditorContainer : Container;
 
