@@ -77,6 +77,7 @@ sections:
         date: lorem-ipsum
         tag: lorem-ipsum
         type: event_item
+        image: images/4.png
     type: column_section
   - title: 'The Network: News And Insights from Layer123'
     actions:
