@@ -287,7 +287,6 @@ models:
   cta_section:
     type: object
     label: CTA Section
-    labelField: title
     fields:
       - type: string
         name: title
