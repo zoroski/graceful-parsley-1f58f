@@ -128,7 +128,10 @@ exports.createPages = ({graphql, getNode, actions, getNodesByType}) => {
                     html: graphQLNode.html,
                     pages: pages,
                     site: {
-                        siteMetadata: _.get(siteData, 'site-metadata', {}),
+                        siteMetadata: {
+                            ..._.get(siteData, 'site-metadata', {}),
+                            mode: process.env.MODE
+                        },
                         pathPrefix: siteNode.pathPrefix,
                         data: _.omit(siteData, 'site-metadata')
                     }
