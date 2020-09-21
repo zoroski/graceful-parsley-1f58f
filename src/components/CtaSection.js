@@ -80,7 +80,7 @@ export default function CtaSection(props) {
   const Component = inEditMode ? EditorContainer : Container;
 
   return (
-    <Component>
+    <div>
       <div className="container container--lg">
         <Content>
           <div className="container container--md">
@@ -100,6 +100,6 @@ export default function CtaSection(props) {
           </div>
         </Content>
       </div>
-    </Component>
+    </div>
   );
 }
