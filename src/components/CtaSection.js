@@ -2,10 +2,20 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
-import { markdownify } from '../utils';
+import { isEditor, markdownify } from '../utils';
 import SectionActions from './SectionActions';
 
 const Container = styled(BackgroundImage)`
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  width: 100%;
+`;
+
+const EditorContainer = styled.div`
+  background-image: url(${props => props.fluid});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,8 +54,6 @@ export default function CtaSection(props) {
     section
   } = props;
 
-  console.log(props);
-
   const data = useStaticQuery(graphql`
     query {
       images: allFile {
@@ -67,8 +75,12 @@ export default function CtaSection(props) {
     return n.node.absolutePath.includes(section?.background_image);
   });
 
+  const inEditMode = isEditor(props);
+
+  const Component = inEditMode ? EditorContainer : Container;
+
   return (
-    // <Container fluid={image?.node?.childImageSharp?.fluid} Tag="section">
+    <Component fluid={inEditMode ? image?.node?.childImageSharp?.fluid?.src : image?.node?.childImageSharp?.fluid} Tag="section">
       <div className="container container--lg">
         <Content>
           <div className="container container--md">
@@ -88,6 +100,6 @@ export default function CtaSection(props) {
           </div>
         </Content>
       </div>
-    // </Container>
+    </Component>
   );
 }
