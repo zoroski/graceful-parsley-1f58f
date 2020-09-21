@@ -1,7 +1,6 @@
 export default function isEditor(props) {
-  if (typeof document === 'undefined' || typeof window === 'undefined') return true;
-  if (props?.location?.href) {
-    return props.location.href.includes('.stackbit.dev');
+  if (!props?.location?.href || typeof document === 'undefined' || typeof window === 'undefined') {
+    return true;
   }
-  throw new Error('No props provided to isEditor function');
+  return props.location.href.includes('.stackbit.dev');
 }
