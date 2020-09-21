@@ -74,15 +74,15 @@ export default function CtaSection(props) {
     return n.node.absolutePath.includes(section?.background_image);
   });
 
-  const inEditMode = isEditor(props);
+  const inEditMode = true; // isEditor(props);
 
-  const Component = inEditMode ? 'div' : Container;
+  const Component = inEditMode ? EditorContainer : Container;
 
   return (
-    <div
-      // fluid={image?.node?.childImageSharp?.fluid}
-      // style={{ backgroundImage: inEditMode ? `url(${image?.node?.childImageSharp?.fluid?.src})` : null }}
-      // Tag="section"
+    <Component
+      fluid={image?.node?.childImageSharp?.fluid}
+      style={{ backgroundImage: inEditMode ? `url(${image?.node?.childImageSharp?.fluid?.src})` : null }}
+      Tag="section"
     >
       <div className="container container--lg">
         <Content>
@@ -103,6 +103,6 @@ export default function CtaSection(props) {
           </div>
         </Content>
       </div>
-    </div>
+    </Component>
   );
 }
