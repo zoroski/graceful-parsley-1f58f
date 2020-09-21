@@ -79,7 +79,7 @@ export default function CtaSection(props) {
   const Component = inEditMode ? 'div' : Container;
 
   return (
-    <Component
+    <div
       // fluid={image?.node?.childImageSharp?.fluid}
       // style={{ backgroundImage: inEditMode ? `url(${image?.node?.childImageSharp?.fluid?.src})` : null }}
       // Tag="section"
@@ -103,6 +103,6 @@ export default function CtaSection(props) {
           </div>
         </Content>
       </div>
-    </Component>
+    </div>
   );
 }
