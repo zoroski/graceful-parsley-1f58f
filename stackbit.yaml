@@ -293,7 +293,7 @@ models:
         name: title
         label: Title
         description: The title of the section
-      - type: markdown
+      - type: string
         name: subtitle
         label: Subtitle
         description: The subtitle of the section
